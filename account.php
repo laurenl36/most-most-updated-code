@@ -52,7 +52,7 @@ Font awesome for the icons
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method='POST'>
                         
                         <h3>Sign in below:</h3><br> 
-                        username: <input type="text" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username']; else echo ""; ?>" style="margin-bottom: .25em;">
+                        username: <input type="text" style="width:25%" name="username" value="<?php if(isset($_POST['username'])) echo $_POST['username']; else echo ""; ?>" style="margin-bottom: .25em;">
                         <?php
                         if (isset($_POST['loginAttempted']) && isset($GLOBALS['errors']['username'])) {
                             print "<br>";
@@ -62,7 +62,7 @@ Font awesome for the icons
                         }
                         ?>
                         <br>
-                        password: <input type='password' name="password" style="margin-bottom: .25em;">
+                        password: <input type='password' style="width:25%" name="password" style="margin-bottom: .25em;">
                         
                         <?php
                         if (isset($_POST['loginAttempted']) && isset($GLOBALS['errors']['password'])) {
@@ -73,7 +73,7 @@ Font awesome for the icons
                         }
                         ?>
                         <br><br>
-                        <button type='submit' name='loginAttempted' value="">Log in</button>
+                        <input type='submit' name='loginAttempted' style="width:15%" value="log in">
                     </form>  </center>             
 
                 
@@ -84,13 +84,13 @@ Font awesome for the icons
                 <!--Option 1: Register for a new account-->
                 <div>
                     <h3>Don't have an account?<br> Register below: </h3><br><br>
-                    <center><a href="register.php"><button>register here!</button></a></center>
+                    <center><a href="register.php"><input type="submit" style="width:15%" value="register here!"></a></center>
                 </div>
                 <?php } else {?>
                 <!--Option 2: Modify Account Details-->
                 <div>
                     <h3>Modify your account below</h3><br><br>
-                    <center><a href="register.php"><button>modify your account</button></a></center>
+                    <center><a href="register.php"><input type="submit" style="width:15%" value="modify your account"></a></center>
                 </div>
                 
                 </div>
